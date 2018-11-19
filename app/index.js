@@ -1,7 +1,8 @@
-var a = 'hello';
-var b = 'world';
-var c = a + b;
-console.log(c);
+let magical = true;
+let power = 2;
+let ranger = { magical: false, power: 10 };
 
-let d = `${a} ${b}`;
-console.log(d);
+// let magical = wizard.magical;
+// let power = wizard.power;
+({ magical, power } = ranger);
+console.log(magical, power);
