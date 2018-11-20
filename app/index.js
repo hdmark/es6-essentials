@@ -1,8 +1,15 @@
-let magical = true;
-let power = 2;
-let ranger = { magical: false, power: 10 };
+import Entity from './entity';
 
-// let magical = wizard.magical;
-// let power = wizard.power;
-({ magical, power } = ranger);
-console.log(magical, power);
+class Hobbit extends Entity {
+  constructor(name, height) {
+    super(name, height);
+  }
+  greet() {
+    console.log('fuck off');
+  }
+}
+let merry = new Hobbit('merry', 4.6);
+merry.greet();
+
+let frodo = new Hobbit('frodo', 4.5);
+console.log(frodo, frodo.greet());
